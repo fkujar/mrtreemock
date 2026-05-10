@@ -23,6 +23,27 @@
     body>*:not(#bgCanvas){position:relative;z-index:1}
     ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#111}::-webkit-scrollbar-thumb{background:#22c55e;border-radius:3px}
 
+    /* ── Logo Pills (horizontal bar) ── */
+    .logo-pill{
+      position:relative;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:12px 22px;border-radius:14px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.1);
+      text-decoration:none;
+      transition:transform .2s,background .2s,border-color .2s,box-shadow .2s,opacity .2s;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .logo-pill:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,0.07);
+      box-shadow:0 8px 30px rgba(0,0,0,0.4);
+      opacity:1!important;
+    }
+    .logo-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+    .logo-text{font-family:'Poppins',sans-serif;font-size:15px;letter-spacing:.5px;}
+
     /* ── Platform Cards ── */
     .platform-card{
       background:rgba(255,255,255,0.03);
@@ -142,13 +163,60 @@
   </div>
 </section>
 
-<!-- PLATFORM GRID -->
-<section class="py-16 px-6" style="background:rgba(0,0,0,0.5)">
+<!-- PLATFORM LOGOS BAR -->
+<section class="py-14 px-6" style="background:rgba(0,0,0,0.5)">
   <div class="max-w-7xl mx-auto">
 
-    <div class="fade-in text-center mb-12">
+    <div class="fade-in text-center mb-10">
       <h2 class="font-bold text-3xl text-white mb-3">Choose Your Platform</h2>
-      <p class="text-gray-500 text-base">Select a leaderboard to see live rankings, prize pools and top players.</p>
+      <p class="text-gray-500 text-base">Clickeá una plataforma para ver su leaderboard completo.</p>
+    </div>
+
+    <!-- LOGO BAR -->
+    <div class="fade-in flex items-center justify-center flex-wrap gap-3 mb-14 px-2">
+
+      <!-- RAIN.GG -->
+      <a href="leaderboard-rain.html" class="logo-pill group" style="border-color:rgba(34,197,94,0.35);">
+        <span class="logo-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e;"></span>
+        <span class="logo-text" style="color:#4ade80;font-style:italic;font-weight:800;letter-spacing:-0.5px;">RAIN<span style="color:#fff;">.GG</span></span>
+      </a>
+
+      <!-- CSGOGEM -->
+      <a href="leaderboard-csgogem.html" class="logo-pill group" style="border-color:rgba(139,92,246,0.35);">
+        <span class="logo-dot" style="background:#8b5cf6;box-shadow:0 0 6px #8b5cf6;"></span>
+        <span class="logo-text" style="color:#a78bfa;font-weight:800;">CSGO<span style="color:#c4b5fd;">GEM</span></span>
+      </a>
+
+      <!-- CASES.GG -->
+      <a href="leaderboard-casesgg.html" class="logo-pill group" style="border-color:rgba(249,115,22,0.35);">
+        <span class="logo-dot" style="background:#f97316;box-shadow:0 0 6px #f97316;"></span>
+        <span class="logo-text" style="color:#fb923c;font-weight:800;">CASES<span style="color:#fff;">.GG</span></span>
+      </a>
+
+      <!-- CSGOWIN -->
+      <a href="leaderboard-csgowin.html" class="logo-pill group" style="border-color:rgba(234,179,8,0.35);">
+        <span class="logo-dot" style="background:#eab308;box-shadow:0 0 6px #eab308;"></span>
+        <span class="logo-text" style="color:#facc15;font-weight:800;">CSGO<span style="color:#fde047;">WIN</span></span>
+      </a>
+
+      <!-- CLASH.GG -->
+      <a href="leaderboard-clashgg.html" class="logo-pill group relative" style="border-color:rgba(255,255,255,0.12);opacity:0.7;">
+        <span class="logo-text" style="color:#9ca3af;font-weight:800;">CLASH<span style="color:#6b7280;">.GG</span></span>
+        <span style="position:absolute;top:-8px;right:-6px;background:linear-gradient(135deg,#22c55e,#4ade80);color:#000;font-size:8px;font-weight:800;padding:2px 5px;border-radius:999px;letter-spacing:.5px;">NEW</span>
+      </a>
+
+      <!-- CSDROP -->
+      <a href="leaderboard-csdrop.html" class="logo-pill group relative" style="border-color:rgba(255,255,255,0.12);opacity:0.7;">
+        <span class="logo-text" style="color:#9ca3af;font-weight:800;">CS<span style="color:#6b7280;">DROP</span></span>
+        <span style="position:absolute;top:-8px;right:-6px;background:linear-gradient(135deg,#22c55e,#4ade80);color:#000;font-size:8px;font-weight:800;padding:2px 5px;border-radius:999px;letter-spacing:.5px;">NEW</span>
+      </a>
+
+      <!-- CASEBATTLE -->
+      <a href="leaderboard-casebattle.html" class="logo-pill group relative" style="border-color:rgba(255,255,255,0.12);opacity:0.7;">
+        <span class="logo-text" style="color:#9ca3af;font-weight:800;">CASE<span style="color:#6b7280;">BATTLE</span></span>
+        <span style="position:absolute;top:-8px;right:-6px;background:linear-gradient(135deg,#22c55e,#4ade80);color:#000;font-size:8px;font-weight:800;padding:2px 5px;border-radius:999px;letter-spacing:.5px;">NEW</span>
+      </a>
+
     </div>
 
     <!-- ACTIVE PLATFORMS -->
